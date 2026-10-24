@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<title>Social Studies Club</title>
+
+    <style> 
+        body {
+            font-family: 'verdana', sans-serif;
+            background-color: #835c40;
+            color: #754421;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+
+        h1 { font-family: 'Courier New', sans-serif;
+            font-size: 28px;
+            color: #fafafa;  }
+
+        header p {
+            color: #78512f;
+            font-size: 18px;
+
+        }
+main {
+            width: 105%;
+            max-width: 430px;
+            padding: 30px;
+            background: #fffdf5;
+            border: 2px solid #ffdc91;
+            border-radius: 22px;
+
+        }
+
+        .description {
+            text-align: center;
+            color: #ad8f75;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: 2px solid #d58e0000;
+            border-radius: 12px;
+            background: #fff8e6;
+            color: #754421;
+            font-family: 'Rajdani', sans-serif;
+            font-size: 17px;
+
+
+        }
+
+        input[type="text"]:placeholder {
+            color: #644e4e;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 14px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 12px;
+            color: #633813;
+            font-family: 'Courier New', sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+
+
+        } 
+
+        input[type="button"]:active {
+            transform: translateY(2px);
+
+        }
+
+        #result { margin-top: 20px;
+            padding: 12px;
+            border-radius: 12px;
+            background: hsl(28, 83%, 84%);
+            color: #a65f22;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="reactor"></div>
+        <h1>Social Studies Club 📜 </h1>
+
+    </header>
+
+    <main>
+        <p class="description"> Are you a member? </p>
+
+        <form>
+            <input type="text" id="first_name" placeholder="First name" required>
+            <input type="text" id="last_name" placeholder="Last name" required>
+<input type="button" py-click="candidate_checker" value="CHECK MEMBERSHIP ✿">
+        </form>
+
+        <div id="result"></div>
+    </main>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
